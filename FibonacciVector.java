@@ -21,14 +21,16 @@ public class FibonacciVector {
      */
     public static void main(String[] args) throws IOException {
         // TODO code application logic here
-       System.out.println("Introduzca el numero de elementos que quiere mostrar de la serie Fibonacci");
+    int a;
+        do{
+        System.out.println("Introduzca el numero de elementos que quiere mostrar de la serie Fibonacci");
          BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
        String n = br.readLine(); 
-          int a = Integer.parseInt(n);
-          if (a<=0){
-                     System.out.println("Debe introducir un numero mayor que 0");
-          }
-          else{
+           a = Integer.parseInt(n);
+         
+                  
+         }while (a<=0);
+          
            int[] v =new int[a];
        
             v[0]=0;
@@ -39,13 +41,13 @@ public class FibonacciVector {
               
             v[i]=v[i-1]+v[i-2];   
            }
-           System.out.println("La serie de Fibonacci con "+n+" elementos es");
+           System.out.println("Los primeros "+a+" elementos de la serie de Fibonacci son");
             for(int i=0;i<=a-1;i++)
            {
               System.out.print ("  "+v[i]);
              System.out.print (" ");
                      
            }
-    }       
+           
     }
 }
